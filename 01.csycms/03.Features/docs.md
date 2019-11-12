@@ -1,7 +1,7 @@
 ---
 title: Features
 metadata:
-    description: We have created an installation script which you can use to install CSYCMS
+    description: That csycms can compare with wordpress & co, we do not pretend. But it is flat file and they are not. And that csycms can compare with grav we do not pretend either. But it is nodejs and it is not. And with csycms you get extra features by which reasonable justification is found for its use and development.
     author: Brian Onang'o
 ---
 

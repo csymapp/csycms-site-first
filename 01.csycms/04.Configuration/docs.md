@@ -1,7 +1,7 @@
 ---
 title: Configuration
 metadata:
-    description: CSYCMS focuses on making things as easy as possible for the user, and the same goes for configuration.
+    description: You will need to do a bit of configuration before you can successfully use CSYCMS. You will need to edit the `.env` file and a `system.config.js` file for each site defined in `.env`. Each of these files have examples with the required parameters. You can check `.env.example` whose contents are copied to `.env` upon installation. And `system.config.example` which is copied for each new site registered.
     author: Brian Onang'o
 ---
 
