@@ -17,7 +17,7 @@ module.exports = function (ROOTPATH) {
     // Your site title (format: page_title - site_title)
     site_space: 'CSECO',
     
-    site_title: 'CSYMS Docs',
+    site_title: 'CSYMS',
 
     search_scope: 'global',
 
