@@ -5,17 +5,14 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Layout tests {{#meta.title}}{{meta.title}} - {{/meta.title}}{{config.site_title}}</title>
-    {{#meta.metadata.description}}<meta name="description" content="{{meta.metadata.description}}"/>{{/meta.metadata.description}}
-    {{#meta.metadata.refresh}}<meta http-equiv="refresh" content="{{meta.metadata.refresh}}"/>{{/meta.metadata.refresh}}
-    {{#meta.metadata.keywords}}<meta name="keywords" content="{{meta.metadata.keywords}}"/>{{/meta.metadata.keywords}}
-    {{#meta.metadata.author}}<meta name="author" content="{{meta.metadata.author}}"/>{{/meta.metadata.author}}
-    {{#meta.metadata.robots}}<meta name="robots" content="{{meta.metadata.robots}}"/>{{/meta.metadata.robots}}
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{{#meta.title}}{{meta.title}} - {{/meta.title}}{{config.site_title}}</title>
+    {{#meta.metadata.description}}<meta name="description" content="{{meta.metadata.description}}">{{/meta.metadata.description}}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="{{config.base_url}}/sites/{{config.site}}/icon.png">
+    <link rel="shortcut icon" href="{{config.base_url}}/icon.png">
     <link rel="stylesheet" href="{{config.base_url}}/themes/default/styles/uf_style.css">
     <link rel="stylesheet" href="{{config.base_url}}/themes/default/styles/cstyle.css">
+    <link rel="stylesheet" href="{{config.base_url}}/sites/gsSite1/styles/cstyle.css">
     {{#config.rtl_layout}}
     <link rel="stylesheet" href="{{config.base_url}}/themes/default/lib/bootstrap-rtl/dist/css/bootstrap-rtl.min.css">
     <link rel="stylesheet" href="{{config.base_url}}/themes/default/styles/raneto.rtl.css">
@@ -28,79 +25,32 @@
 
 <body class="searchbox-hidden">
     <div class="wrapper">
-        <div class="navbar-fixed" id="nav-main">
+        <div class="navbar-fixed" id="nav-main" >
             <nav class="custom">
-                <div class="nav-wrapper">
-                    <a href="{{config.base_url}}/" class="brand-logo" style="padding-left: 2rem; text-transform: uppercase">{{config.site_title}}</a>
+                <div class="nav-wrapper" style="background-color: #52372A;">
+                    <a href="{{config.base_url}}/" class="brand-logo" style="padding-left: 2rem; text-transform: uppercase;font-size: 1.4em;">{{config.site_title}}</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        {{#config.externalLinks}}
-                            <li>{{{.}}}</li>
-                        {{/config.externalLinks}}
-                        {{#config.telegram}}
-                        <span id="nav-social">
-                            <li class="fa-stack"><a href="{{config.telegram}}" target="_blank"><i
-                                class="fa fa-circle fa-stack-2x"></i><i class="fa fa-telegram fa-stack-1x"></i></a></li>
-                        </span>
-                        {{/config.telegram}}
-                        {{#config.whatsapp}}
-                        <span id="nav-social">
-                            <li class="fa-stack"><a href="{{config.whatsapp}}" target="_blank"><i
-                                class="fa fa-circle fa-stack-2x"></i><i class="fa fa-whatsapp fa-stack-1x"></i></a></li>
-                        </span>
-                        {{/config.whatsapp}}
-                        {{#config.facebook}}
-                        <span id="nav-social">
-                            <li class="fa-stack"><a href="{{config.facebook}}" target="_blank"><i
-                                class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></a></li>
-                        </span>
-                        {{/config.facebook}}
-                       {{#config.youtube}}
-                        <span id="nav-social">
-                            <li class="fa-stack"><a href="{{config.youtube}}" target="_blank"><i
-                                class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x"></i></a></li>
-                        </span>
-                        {{/config.youtube}}
-                        {{#config.github}}
-                        <span id="nav-social">
-                            <li class="fa-stack"><a href="{{config.github}}" target="_blank"><i
-                                class="fa fa-circle fa-stack-2x"></i><i class="fa fa-github fa-stack-1x"></i></a></li>
-                        </span>
-                        {{/config.github}}
-                    </ul>
+                   
                 </div>
             </nav>
         </div>
 
-        <nav id="sidebar">
-            <div id="header-wrapper">
-                <div id="header">
-                    <a id="logo" href="#"><span class="logo-title"> {{config.site_title}}</span>
+        <nav id="sidebar" style="background-color:#8A5E3B; color: #fff;">
+            <div id="header-wrapper" >
+                <div id="header" style="background-color:#8A5E3B !important;;">
+                    <a id="logo" href="#"><span class="logo-title" style="font-size: 1.4em;"> {{config.site_title}}</span>
                     </a>
                     <form class="searchbox" action="{{config.base_url}}/">
                         <label for="search-by"><i class="fa fa-search"></i></label>
                         <input type="search" search name="search" id="search" value="{{search}}" placeholder="{{lang.global.search}}">
                         <span data-search-clear><i class="fa fa-close"></i></span>
                     </form>
-                    <div id="mobile-nav">
-                         {{#config.facebook}}
-                            <a href="{{config.facebook}}">Facebok</a> 
-                    {{/config.facebook}}
-                        
-                        {{#config.github}}
-                            <a href="{{config.facebook}}">Github</a>
-                        {{/config.github}}
-                         {{#config.github}}
-                        <a href="{{config.facebook}}">Youtube</a>
-                    {{/config.github}}
-                    </div>
-                   
                 </div>
             </div>
 
 
             <div class="scrollbar-inner">
-                <div class="highlightable">
+                <div class="highlightable" >
                     <ul class="topics">
                         {{#pages}}
                         {{#is_index}}
@@ -121,29 +71,29 @@
                             </a>
                             <ul>
                                 {{#files}}
-                                <li class="dd-item {{#parent}} parent{{/parent}} {{#active}} active{{/active}}" data-nav-id="{{config.base_url}}/{{slug}}">
+                                <li class="dd-item {{#active}} active{{/active}}" data-nav-id="{{config.base_url}}/{{slug}}">
                                     <a href="{{slug}}">
                                         <i class="fa fa-check read-icon"></i>
                                         <span>{{title}}</span>
                                     </a>
                                     <ul>
                                         {{#files}}
-                                        <li class="dd-item {{#parent}} parent{{/parent}} {{#active}} active{{/active}}" data-nav-id="{{config.base_url}}/{{slug}}">
+                                        <li class="dd-item {{#active}} active{{/active}}" data-nav-id="{{config.base_url}}/{{slug}}">
                                             <a href="{{slug}}">
                                                 <i class="fa fa-check read-icon"></i>
                                                 <span>{{title}}</span>
                                             </a>
-                                            <ul>
-                                                {{#files}}
-                                                <li class="dd-item {{#parent}} parent{{/parent}} {{#active}} active{{/active}}" data-nav-id="{{config.base_url}}/{{slug}}">
-                                                    <a href="{{slug}}">
-                                                        <i class="fa fa-check read-icon"></i>
-                                                        <span>{{title}}</span>
-                                                    </a>
-                                                </li>
-                                                {{/files}}
-                                            </ul>    
                                         </li>
+                                        <ul>
+                                            {{#files}}
+                                            <li class="dd-item {{#active}} active{{/active}}" data-nav-id="{{config.base_url}}/{{slug}}">
+                                                <a href="{{slug}}">
+                                                    <i class="fa fa-check read-icon"></i>
+                                                    <span>{{title}}</span>
+                                                </a>
+                                            </li>
+                                            {{/files}}
+                                        </ul>
                                         {{/files}}
                                     </ul>
                                 </li>
@@ -160,17 +110,7 @@
                     </ul>
                     <hr />
 
-                    <a class="padding" href="#" data-clear-history-toggle><i class="fa fa-fw fa-history"></i> Clear
-                        History</a><br />
-
-                    <section id="footer">
-                        <p>Built with <a href="http://csycms.csymapp.com">csyms</a> - A Flat File CMS for node</p>
-                        <p>
-                            {{#config.copyright}}
-                            <p>{{{config.copyright}}}</p>
-                            {{/config.copyright}}
-                        </p>
-                    </section>
+                   
                 </div>
             </div>
         </nav>
@@ -204,11 +144,10 @@
                         <br>
                         {{/breadCrumbs}}
                     </div>
-                    {{#Toc}}
+
                     <div class="toc">
                         <ol data-toc="body" data-toc-headings="h2, h3"></ol>
                     </div>
-                    {{/Toc}}
                 </div>
                 {{{yield}}}
 
@@ -302,15 +241,6 @@
             $('#data-search-clear').on('click', function () {
                 $('[search]').val('').trigger('input'); sessionStorage.removeItem('search-input');
             });
-
-            $('.tabs-wrapper > ul a[rel="tab"]').click(function (event) {
-        event.preventDefault();
-        $(this).parent().siblings().removeClass("current");
-        $(this).parent().addClass("current");
-        var tab = $(this).attr("href");
-        $(tab).siblings().css('display', 'none');
-        $(tab).fadeIn()
-    })
         });
     </script>
 
