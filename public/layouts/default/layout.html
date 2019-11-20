@@ -31,7 +31,7 @@
         <div class="navbar-fixed" id="nav-main">
             <nav class="custom">
                 <div class="nav-wrapper">
-                    <a href="{{config.base_url}}/" class="brand-logo" style="padding-left: 2rem; text-transform: uppercase">{{config.site_title}}</a>
+                    <a href="{{config.base_url}}/" class="brand-logo" style="padding-left: 2rem; text-transform: uppercase; font-size:{{config.title_size}}em;">{{config.site_title}}</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         {{#config.externalLinks}}
@@ -75,7 +75,7 @@
         <nav id="sidebar">
             <div id="header-wrapper">
                 <div id="header">
-                    <a id="logo" href="#"><span class="logo-title"> {{config.site_title}}</span>
+                    <a id="logo" href="#"><span class="logo-title" style="font-size:{{config.title_size}}em;"> {{config.site_title}}</span>
                     </a>
                     <form class="searchbox" action="{{config.base_url}}/">
                         <label for="search-by"><i class="fa fa-search"></i></label>
